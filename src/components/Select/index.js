@@ -5,7 +5,7 @@ function Select({placeholder, selected, options, onChange}) {
     {!selected && <option value='' hidden>{placeholder}</option>}
     {options.map(option => {
       if (option === selected) {
-        return <option key={option} selected value={option}>{option}</option>
+        return <option key={option} selected={selected} value={option}>{option}</option>
       } else {
         return <option key={option} value={option}>{option}</option>
       }

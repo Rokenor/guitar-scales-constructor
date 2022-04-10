@@ -21,6 +21,12 @@ function getGuitarTuning(startNote, mode, view) {
     });
   }
 
+  if (view === 'text') {
+    resultTuning = resultTuning.map((item ,index) => {
+      return `${item} `
+    })
+  }
+
   return resultTuning;
 }
 
