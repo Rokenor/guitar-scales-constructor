@@ -433,4 +433,6 @@ export const ScalesGridItemText = styled.span`
   font-weight: 500;
 
   opacity: 0.9;
+
+  user-select: none;
 `;
