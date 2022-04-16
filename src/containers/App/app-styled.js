@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Roboto", sans-serif;
+  min-height: 95vh;
 `;
