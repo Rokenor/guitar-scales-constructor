@@ -1,6 +1,6 @@
-import Scales from '../Scales';
+import Scales from "../Scales";
 
-import { AppWrapper } from './app-styled';
+import { AppWrapper } from "./app-styled";
 
 function App() {
   return (

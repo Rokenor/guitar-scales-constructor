@@ -1,5 +1,5 @@
 import getNoteSequence from "./getNoteSequence";
-import {TUNING_NORMAL, TUNING_DROP} from '../constants/common';
+import { TUNING_NORMAL, TUNING_DROP } from "../constants/common";
 
 function getGuitarTuning(startNote, mode, view) {
   if (!startNote) {
@@ -9,22 +9,20 @@ function getGuitarTuning(startNote, mode, view) {
   const currentSequence = getNoteSequence(startNote);
   let resultTuning = [];
 
-  if (mode === 'normal') {
-    resultTuning = TUNING_NORMAL.map(string => {
+  if (mode === "normal") {
+    resultTuning = TUNING_NORMAL.map((string) => {
       return currentSequence[string];
     });
   }
 
-  if (mode === 'drop') {
-    resultTuning = TUNING_DROP.map(string => {
+  if (mode === "drop") {
+    resultTuning = TUNING_DROP.map((string) => {
       return currentSequence[string];
     });
   }
 
-  if (view === 'text') {
-    resultTuning = resultTuning.map((item ,index) => {
-      return `${item} `
-    })
+  if (view === "text") {
+    return resultTuning.join(" ");
   }
 
   return resultTuning;

@@ -1,8 +1,17 @@
-import {NOTE_SEQUENCE} from '../constants/common';
+import { NOTE_SEQUENCE } from "../constants/common";
 
 function getNoteSequence(startNote) {
-  const startNoteIndex = NOTE_SEQUENCE.findIndex(note => note === startNote);
-  const resultNoteSequence = NOTE_SEQUENCE.slice(startNoteIndex).concat(NOTE_SEQUENCE.slice(0, startNoteIndex));
+  let normalizedNoteSequence = NOTE_SEQUENCE.map((note) => {
+    return note.name;
+  });
+
+  const startNoteIndex = normalizedNoteSequence.findIndex(
+    (note) => note === startNote
+  );
+
+  const resultNoteSequence = normalizedNoteSequence
+    .slice(startNoteIndex)
+    .concat(normalizedNoteSequence.slice(0, startNoteIndex));
 
   return resultNoteSequence;
 }
